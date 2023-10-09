@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa em JS</title>
+    <style>
+        body { /* Comentário em CSS */
+            background-color: rgb(168, 168, 255);
+            color: rgb(255, 198, 40);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3em;
+        }
+
+        p {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1> <!-- Comentário em HTML -->
+    <p>Já me livrei da maldição</p>
+    <script>
+        var n1 = Number(window.prompt('Digite um número: '))
+       // var n1 = Number.parseInt(window.prompt('Digite um número: '))  string e "Number.parseInt" para conversão em um número inteiro, pode usar só "parseInt" sem o Number
+        var n2 = Number(window.prompt('Digite outro número: '))
+       // var n2 = Number.parseInt(window.prompt('Digite outro número: '))  string e "Number.parseInt" para conversão em um número
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`) // Com template strings
+        // window.alert('A soma dos valores é: ' + String(s)) Sem template strings
+        // Se quiser a soma de números quebrados colocar na conversão "Number.parseFloat()"
+        // Se quiser que o JS interprete sozinho so valores recebidos como Int ou Float usar só o Number()
+    </script>
+</body>
+</html>
