@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Primeiro passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(39, 84, 167);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+       var corpo = window.document.body
+       corpo.style.background = 'black'
+       // window.document.write('Olá, Mundo!') Escrever através do DOM
+       // window.document.write(window.document.charset) Buscando configurações da página
+       // window.document.write(window.navigator.appName)
+       // window.document.write(window.document.URL) Vendo a URL
+       // var p1 = window.document.getElementsByTagName('p')[1] Selecionando um dos parágrafos pelo número, que começa do 0
+       // window.document.write('Está escrito assim: ' + p1.innerText)  innerText pega o texto dentro do parágrafo
+        /*
+        p1.style.color = 'pink' // Selecionando sem o window alert e mudando a cor do texto do <p>
+        document.write(p1.innerHTML) // Mostra o texto formatado do <p>
+        var d = window.document.getElementById('msg') // Selecionando a div pelo ID
+        d.style.background = 'green' // Mudando a cor do background da div
+        // d.innerText = 'Estou aguardando...' Mudando o texto dentro da div
+        // window.document.getElementById('msg').innerText = 'Olá' Comando completo para mudar o texto se for usar só uma vez 
+        var d = window.document.getElementsByName('msg')[0] //  Selecionando a div pelo nome
+        d.innerText = 'Olá'
+        */
+       var d = window.document.querySelector('div#msg') // Usando a sintaxe da CSS sendo id = # e classe = .
+       d.style.color = 'pink'
+       d.style.background = 'green'
+    </script>
 </body>
 </html>
