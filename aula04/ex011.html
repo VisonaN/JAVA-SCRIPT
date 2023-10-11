@@ -6,6 +6,23 @@
     <title>Nacionalidade</title>
 </head>
 <body>
-    <h1>Criar o ex009.js em forma de site</h1>
+    <h1>Qual a sua Nacionalidade?</h1>
+    Escreva aqui seu País: <input type="text" name="tpais" id="tpais">
+    <input type="button" value="Pesquisar" onclick="mostrar()">
+    <div id="tnacio">
+
+    </div>
+    <script>
+        function mostrar() {
+            var tpais = window.document.querySelector('input#tpais')
+            var nacio = window.document.querySelector('div#tnacio')
+            var pais = (tpais.value) // Tem que colocar .value para fazer valer a condição
+            if (pais == 'Brasil') {
+                nacio.innerText = `Vivendo em ${pais}, você é Brasileiro!`
+            } else {
+                nacio.innerText = `Vivendo em ${pais}, você é Estrangeiro!`
+            }
+        }
+    </script>
 </body>
 </html>
